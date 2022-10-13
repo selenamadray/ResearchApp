@@ -1,14 +1,6 @@
 from App.models import User
 from App.database import db
 
-
-
-def create_RegUser(username):
-    newReguser = RegUser(username=username)
-    db.session.add(newReguser)
-    db.session.commit()
-    return newReguser
-
 def create_Author(username,fullname,password,email):
     newAuthor = User(username=username, fullname=fullname, password= password, email= email)
     db.session.add(newAuthor)
@@ -38,7 +30,3 @@ def update_user(id, username):
         db.session.add(user)
         return db.session.commit()
     return None
-    
-def update_author(id, )
-    return None
-    
